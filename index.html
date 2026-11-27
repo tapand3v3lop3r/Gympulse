@@ -318,7 +318,7 @@ ${it.type==="Appreciation"?h`<div class="vis"><${Ic} n="check" s=${16}/> Acknowl
 function Login({s,go}){const[b,setB]=useState(s.branches[0].id),br=s.branches.find(x=>x.id===b)||s.branches[0];
 return h`<div class="lg"><div class="lgh" style=${{backgroundImage:"linear-gradient(90deg,rgba(11,18,32,.92),rgba(11,18,32,.5)),url("+BANNER+")"}}><div style=${{display:"flex",justifyContent:"space-between",alignItems:"center"}}><img src=${LOGO_IMG} alt="GymPulse"/><${ThemeBtn}/></div><h1>Internal operations platform</h1><div style=${{opacity:.85}}>Choose a role to continue.</div></div>
 
-<div class="g2 g3"><div class="card"><h2>Management</h2><p class="mu sm">Network-wide view of every branch, escalations, analytics, branches and staff.</p><button class="btn p w" onClick=${()=>go({role:"mgmt",name:"Ananya Sharma",title:"Head of Operations"})}>Continue as Ananya Sharma</button></div>
+<div class="g2 g3"><div class="card"><h2>Management</h2><p class="mu sm">Network-wide view of every branch, escalations, analytics, branches and staff.</p><button class="btn p w" onClick=${()=>go({role:"mgmt",name:"Tapan Kumar",title:"Head of Operations"})}>Continue as Tapan Kumar</button></div>
 <div class="card"><h2>Branch staff</h2><p class="mu sm">Only your branch’s feedback, team and assignments.</p><div class="fld"><${Sel} v=${b} on=${x=>setB(x||b)} ph="Branch" o=${s.branches.map(x=>[x.id,x.name])}/></div>
 ${br.staff.map((n,k)=>h`<button key=${n} class="btn w" style=${{marginBottom:6,textAlign:"left",padding:10}} onClick=${()=>go({role:"staff",branch:br.id,name:n,title:k?"Branch Staff":"Branch Manager"})}>${n} <span class="mu sm">· ${k?"Staff":"Manager"}</span></button>`)}</div></div><a href="#" class="sm">← Back to launcher</a></div>`}
 
